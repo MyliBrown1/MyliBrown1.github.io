@@ -7,12 +7,42 @@
 -->
 <html>
 	<head>
-		<title>Myli's Online Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+    <title>Myli's Online Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Responsive Fixes */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Ensure text doesn't overflow */
+        .major h2, .post h2 {
+            font-size: 1.5em;
+            text-align: center;
+        }
+        
+        /* Adjust section padding for mobile */
+        @media screen and (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+            .image.main img {
+                width: 100%;
+                height: auto;
+            }
+            .posts article {
+                padding: 10px;
+            }
+            .actions.special {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
