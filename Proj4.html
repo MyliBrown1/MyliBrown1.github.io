@@ -43,34 +43,38 @@
 
 						<!-- Post -->
 						<section class="post">
-							<header class="major">
-								<span class="date">Fall 2022</span>
-								<h1>University Data Project</h1>
-							</header>
-						
-							<div class="pdf-container">
-								<embed src="images/Universities_Project.pdf" type="application/pdf">
-							</div>
-						
-						</section>
-						
-						<style>
-							.pdf-container {
-								width: 100%;
-								max-width: 100%;
-							}
-						
-							.pdf-container embed {
-								width: 100%;
-								height: 80vh; /* Adjusts dynamically based on viewport height */
-							}
-						
-							@media screen and (max-width: 600px) {
-								.pdf-container embed {
-									height: 60vh; /* Smaller height for mobile screens */
-								}
-							}
-						</style>
+    <header class="major">
+        <span class="date">Fall 2022</span>
+        <h1>University Data Project</h1>
+    </header>
+
+    <div class="pdf-container">
+        <iframe src="images/Universities_Project.pdf"></iframe>
+    </div>
+</section>
+
+<style>
+    .pdf-container {
+        width: 100%;
+        max-width: 100%;
+        height: 80vh; /* Adjust height based on viewport */
+        overflow: auto; /* Allows scrolling inside the PDF */
+        border: 1px solid #ccc; /* Optional: Adds a border for clarity */
+    }
+
+    .pdf-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    @media screen and (max-width: 600px) {
+        .pdf-container {
+            height: 70vh; /* Adjusts dynamically for smaller screens */
+        }
+    }
+</style>
+
 
 					</div>
 
