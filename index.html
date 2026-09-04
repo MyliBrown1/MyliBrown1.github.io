@@ -1,142 +1,275 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-    <title>Myli's Online Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Myli Brown — Applied Business Analytics graduate student and doctoral applicant in Information Systems.">
+    <title>Myli Brown | Information Systems & Analytics</title>
+
+    <!-- Editorial + modern sans-serif typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#0a192f',
+                        navy: { 800: '#0f233a', 700: '#1b3a5b', 600: '#234e79' },
+                        slate: { 700: '#334e68', 600: '#486581', 500: '#627d98' },
+                        cerulean: { 600: '#2b6cb0', 500: '#3182ce', 400: '#63b3ed', 300: '#90cdf4', 200: '#bee3f8', 100: '#d9edf9' },
+                        ice: '#e8f4fc'
+                    },
+                    fontFamily: {
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+
     <style>
-        /* Responsive Fixes */
-        img {
-            max-width: 100%;
-            height: auto;
+        :root {
+            --midnight: #0a192f;
+            --slate: #486581;
+            --cerulean: #3182ce;
+            --ice: #eef6fc;
         }
 
-        /* Ensure text doesn't overflow */
-        .major h2, .post h2 {
-            font-size: 1.5em;
-            text-align: center;
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--ice);
+            background-image:
+                radial-gradient(circle at 15% 20%, rgba(255,255,255,.88) 0, transparent 34%),
+                radial-gradient(circle at 85% 25%, rgba(191,227,248,.50) 0, transparent 30%),
+                radial-gradient(circle at 45% 70%, rgba(255,255,255,.70) 0, transparent 36%),
+                linear-gradient(135deg, #eef7fd 0%, #e4f1fb 48%, #eef8fd 100%);
+            color: var(--slate);
+            min-height: 100vh;
         }
 
-        /* Adjust section padding for mobile */
-        @media screen and (max-width: 600px) {
-            body {
-                font-size: 14px;
-            }
-            .image.main img {
-                width: 100%;
-                height: auto;
-            }
-            .posts article {
-                padding: 10px;
-            }
-            .actions.special {
-                text-align: center;
-            }
+        .marble-overlay {
+            background:
+                radial-gradient(ellipse at 20% 45%, rgba(255,255,255,.38), transparent 38%),
+                radial-gradient(ellipse at 75% 60%, rgba(145,205,244,.16), transparent 42%);
+        }
+
+        .glass-card {
+            background: rgba(255,255,255,.84);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,.95);
+            box-shadow: 0 12px 36px -8px rgba(32,68,105,.08), 0 2px 8px rgba(32,68,105,.04);
+            transition: transform .3s ease, background .3s ease, box-shadow .3s ease, border-color .3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(255,255,255,.94);
+            border-color: rgba(144,205,244,.8);
+            box-shadow: 0 18px 42px -10px rgba(32,68,105,.13), 0 0 24px rgba(186,215,242,.35);
+        }
+
+        .portal-card { 
+            background: rgba(255,255,255,.86);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,.95);
+            box-shadow: 0 14px 38px -10px rgba(30,64,100,.09), 0 2px 8px rgba(30,64,100,.03);
+            transition: transform .35s cubic-bezier(.16,1,.3,1), background .35s ease, box-shadow .35s ease, border-color .35s ease;
+        }
+
+        .portal-card:hover {
+            background: rgba(255,255,255,.97);
+            border-color: rgba(144,205,244,.9);
+            transform: translateY(-4px);
+            box-shadow: 0 24px 48px -12px rgba(20,50,85,.14), 0 0 32px rgba(147,197,253,.35);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
         }
     </style>
 </head>
-<body>
-    <div id="wrapper" class="fade-in">
-        <div id="intro">
-            <h1>My Portfolio</h1>
-            <ul class="actions">
-                <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-            </ul>
+
+<body class="font-sans antialiased overflow-x-hidden relative">
+    <div aria-hidden="true" class="fixed inset-0 marble-overlay pointer-events-none -z-10"></div>
+    <div aria-hidden="true" class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1100px] h-[500px] bg-gradient-to-b from-white/40 via-cerulean-100/20 to-transparent blur-3xl pointer-events-none -z-10"></div>
+
+    <!-- Minimal Header -->
+    <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-white/80 border-b border-blue-100/60 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3.5 sm:px-6 md:px-12 md:py-4 flex items-center justify-between gap-3 min-h-[4rem]">
+            <a href="#hero" class="flex items-center gap-3 group min-h-[44px]" aria-label="Myli Brown home">
+                <span class="w-8 h-8 rounded-full bg-ice border border-cerulean-300 flex items-center justify-center group-hover:border-cerulean-500 group-hover:scale-105 transition-all shadow-sm shrink-0">
+                    <span class="w-2 h-2 rounded-full bg-cerulean-500"></span>
+                </span>
+                <span class="font-display font-semibold text-lg sm:text-xl tracking-wide text-midnight group-hover:text-cerulean-600 transition-colors">Myli Brown</span>
+            </a>
+
+            <div class="flex items-center gap-2 sm:gap-4 ml-auto">
+                <a href="mailto:mylib@uark.edu" class="hidden sm:inline-flex items-center gap-2 min-h-[44px] px-2 text-xs uppercase tracking-wider text-slate-600 hover:text-midnight font-medium transition-colors">
+                    <i class="fa-regular fa-envelope text-cerulean-600" aria-hidden="true"></i>
+                    <span>mylib@uark.edu</span>
+                </a>
+                <a href="resume.html" class="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-full min-h-[44px] text-xs font-bold uppercase tracking-wider bg-midnight text-white hover:bg-cerulean-600 transition-all duration-200 shadow-sm">
+                    <span>Resume / CV</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
+    </header>
 
-        <header id="header">
-            <a href="#main" class="logo">Myli Brown</a>
-        </header>
+    <main class="relative pt-24 pb-12 sm:pt-28 md:pt-32 md:pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-12 sm:space-y-14 md:space-y-16">
 
-        <nav id="nav">
-            <ul class="links">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="Research.html">Research</a></li>
-                <li><a href="projects_index.html">Projects</a></li>
-            </ul>
-            <ul class="icons">
-                <li><a href="https://www.linkedin.com/in/myli-brown-438349256/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-            </ul>
-        </nav>
+            <!-- Hero -->
+            <section id="hero" class="relative scroll-mt-28">
+                <div class="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-12">
+                    <div class="flex-1 text-center lg:text-left w-full">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-700 bg-white/85 border border-cerulean-200 shadow-sm backdrop-blur-md mb-4 sm:mb-6">
+                            <span class="w-2 h-2 rounded-full bg-cerulean-500 shrink-0"></span>
+                            <span>Doctoral Applicant · Information Systems</span>
+                        </div>
 
-        <div id="main">
-            <article class="post featured">
-                <header class="major">
-                    <span class="date">June 18, 2026</span>
-                    <h2>About Me</h2>
-                    <p>My name is Myli Brown. I am a Data Science Graduate with a focus in Business Data Analytics and a minor in Statistics at the University of Arkansas. I am currently pursuing a master's degree in Applied Business Analytics online through the University of Arkansas.</p>
-                </header>
-                <div style="text-align: center;">
-                    <img src="images/Myli.jpg" alt="Professional Headshot" style="width: 45%; max-width: 450px; min-width: 220px; height: auto;" />
+                        <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-none text-midnight uppercase mb-4 sm:mb-6 drop-shadow-sm">
+                            Myli Brown
+                        </h1>
+
+                        <p class="text-base sm:text-lg lg:text-xl leading-relaxed text-slate-700 font-light max-w-2xl mx-auto lg:mx-0 tracking-wide">
+                            <span class="font-normal text-midnight">Applied Business Analytics</span> graduate student pursuing doctoral study in
+                            <span class="font-normal text-midnight">Information Systems</span>, with a research background spanning data science, statistics, and business analytics. Experienced in applying statistical and machine learning methods to real-world data, with research interests in anomaly detection, data-driven decision-making, and the application of analytics to business problems.
+                        </p>
+                    </div>
+
+                    <div class="flex-shrink-0 relative group self-center">
+                        <div class="absolute -inset-2 bg-gradient-to-br from-cerulean-200/50 via-ice/70 to-blue-200/40 rounded-3xl blur-xl sm:blur-2xl opacity-90"></div>
+                        <div class="relative w-48 h-60 sm:w-60 sm:h-72 lg:w-72 lg:h-80 xl:w-80 xl:h-96 rounded-3xl overflow-hidden border-2 border-white/95 shadow-xl bg-white/50 backdrop-blur-md">
+                            <img src="images/Myli.jpg" alt="Professional headshot of Myli Brown" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/15 via-transparent to-transparent pointer-events-none"></div>
+                        </div>
+                    </div>
                 </div>
-            </article>
+            </section>
 
-            <section class="posts">
-                <article>
-                    <header>
-                        <span class="date">Summer 2026</span>
-                        <h2><a href="resume.html">My Resume</a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/New_Resume-Cover.png" alt="Resume cover" /></a>
-                    <ul class="actions special">
-                        <li><a href="resume.html" class="button">See Resume</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date">Spring 2026</span>
-                        <h2><a href="Research.html">Undergraduate Research</a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/ResearchCover.png" alt="Research cover" /></a>
-                    <ul class="actions special">
-                        <li><a href="Research.html" class="button">See Research</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <h2><a href="projects_index.html">Projects</a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/Abandoned_AR_Cover.png" alt="Abandoned Places project cover" /></a>
-                    <ul class="actions special">
-                        <li><a href="projects_index.html" class="button">See Projects</a></li>
-                    </ul>
-                </article>
+            <!-- Academic Foundation -->
+            <section aria-labelledby="academic-heading" class="space-y-3">
+                <div class="flex items-center gap-3 text-xs uppercase tracking-widest text-slate-600 font-bold mb-1">
+                    <span class="w-5 h-[2px] bg-cerulean-500" aria-hidden="true"></span>
+                    <h2 id="academic-heading" class="font-sans text-xs">Academic Foundation</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <article class="glass-card rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col justify-between min-h-[175px]">
+                        <div>
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <span class="text-xs uppercase tracking-wider font-semibold text-slate-700 bg-white/90 px-3 py-1 rounded-full border border-cerulean-200 shadow-sm">Graduate Study</span>
+                                <span class="text-xs text-slate-500 font-mono font-medium">2025–2027</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-display font-semibold text-midnight mb-1">Master of Applied Business Analytics</h3>
+                            <p class="text-sm text-slate-600">Sam M. Walton College of Business</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-cerulean-100/80 flex items-center justify-between gap-3 text-xs">
+                            <span class="text-slate-600 font-medium">Academic Standing</span>
+                            <span class="font-bold font-display text-cerulean-600 text-base sm:text-lg tracking-wide whitespace-nowrap">4.0 / 4.0 GPA</span>
+                        </div>
+                    </article>
+
+                    <article class="glass-card rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col justify-between min-h-[175px]">
+                        <div>
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <span class="text-xs uppercase tracking-wider font-semibold text-slate-700 bg-white/90 px-3 py-1 rounded-full border border-cerulean-200 shadow-sm">Undergraduate</span>
+                                <span class="text-xs text-slate-500 font-mono font-medium">2022–2026</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-display font-semibold text-midnight mb-1">B.S. in Data Science <span class="text-base font-sans font-light text-slate-600">(Business Analytics)</span></h3>
+                            <p class="text-sm text-slate-600">College of Engineering &amp; Walton College</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-cerulean-100/80 flex flex-wrap items-center justify-between gap-2 text-xs">
+                            <span class="text-slate-600 font-medium">Summa Cum Laude · First-Ranked Senior Scholar</span>
+                            <span class="font-bold font-display text-cerulean-600 text-base sm:text-lg tracking-wide whitespace-nowrap">4.0 / 4.0 GPA</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Portals -->
+            <section aria-labelledby="portals-heading" class="space-y-4 pt-2">
+                <div class="flex items-center gap-3 text-xs uppercase tracking-widest text-slate-600 font-bold mb-1">
+                    <span class="w-5 h-[2px] bg-cerulean-500" aria-hidden="true"></span>
+                    <h2 id="portals-heading" class="font-sans text-xs">Portals &amp; Portfolios</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                    <a href="resume.html" class="portal-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group min-h-[235px]" id="portal-resume">
+                        <div>
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-midnight border-2 border-midnight flex items-center justify-center text-white text-xl sm:text-2xl mb-5 sm:mb-6 transition-all shadow-md group-hover:bg-cerulean-600 group-hover:border-cerulean-600">
+                                <i class="fa-solid fa-file-lines group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-2xl sm:text-3xl font-display font-bold text-midnight group-hover:text-cerulean-600 transition-colors mb-2">Resume</h3>
+                            <p class="text-sm text-slate-600 font-light leading-relaxed">Academic and work experience. Qualifications, skills, and awards.</p>
+                        </div>
+                        <div class="pt-5 sm:pt-6 mt-6 border-t border-cerulean-100/80 flex items-center justify-between min-h-[44px]">
+                            <span class="text-xs uppercase tracking-wider font-semibold text-slate-600 group-hover:text-cerulean-600 transition-colors">Access CV</span>
+                            <span class="w-8 h-8 rounded-full bg-white border border-cerulean-200 flex items-center justify-center text-midnight group-hover:bg-midnight group-hover:text-white group-hover:translate-x-1 transition-all shadow-sm shrink-0">
+                                <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="Research.html" class="portal-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group min-h-[235px]" id="portal-research">
+                        <div>
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-midnight border-2 border-midnight flex items-center justify-center text-white text-xl sm:text-2xl mb-5 sm:mb-6 transition-all shadow-md group-hover:bg-cerulean-600 group-hover:border-cerulean-600">
+                                <i class="fa-solid fa-brain group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-2xl sm:text-3xl font-display font-bold text-midnight group-hover:text-cerulean-600 transition-colors mb-2">Research</h3>
+                            <p class="text-sm text-slate-600 font-light leading-relaxed">Honors Senior Thesis, isolation forest algorithms, retail demand analysis, and anomaly detection frameworks.</p>
+                        </div>
+                        <div class="pt-5 sm:pt-6 mt-6 border-t border-cerulean-100/80 flex items-center justify-between min-h-[44px]">
+                            <span class="text-xs uppercase tracking-wider font-semibold text-slate-600 group-hover:text-cerulean-600 transition-colors">View Research</span>
+                            <span class="w-8 h-8 rounded-full bg-white border border-cerulean-200 flex items-center justify-center text-midnight group-hover:bg-midnight group-hover:text-white group-hover:translate-x-1 transition-all shadow-sm shrink-0">
+                                <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="projects_index.html" class="portal-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group min-h-[235px] sm:col-span-2 lg:col-span-1" id="portal-projects">
+                        <div>
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-midnight border-2 border-midnight flex items-center justify-center text-white text-xl sm:text-2xl mb-5 sm:mb-6 transition-all shadow-md group-hover:bg-cerulean-600 group-hover:border-cerulean-600">
+                                <i class="fa-solid fa-cubes-stacked group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-2xl sm:text-3xl font-display font-bold text-midnight group-hover:text-cerulean-600 transition-colors mb-2">Projects</h3>
+                            <p class="text-sm text-slate-600 font-light leading-relaxed">Analytics projects, coding, business problem solving, ERP systems, optimization projects, and more.</p>
+                        </div>
+                        <div class="pt-5 sm:pt-6 mt-6 border-t border-cerulean-100/80 flex items-center justify-between min-h-[44px]">
+                            <span class="text-xs uppercase tracking-wider font-semibold text-slate-600 group-hover:text-cerulean-600 transition-colors">Browse Projects</span>
+                            <span class="w-8 h-8 rounded-full bg-white border border-cerulean-200 flex items-center justify-center text-midnight group-hover:bg-midnight group-hover:text-white group-hover:translate-x-1 transition-all shadow-sm shrink-0">
+                                <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
             </section>
         </div>
+    </main>
 
-        <footer id="footer">
-            <section class="split contact">
-                <section>
-                    <h3>Phone</h3>
-                    <p>(479) 774-1970</p>
-                </section>
-                <section>
-                    <h3>Email</h3>
-                    <p>mylib@uark.edu</p>
-                </section>
-                <section>
-                    <h3>Social</h3>
-                    <ul class="icons alt">
-                        <li><a href="https://www.linkedin.com/in/myli-brown-438349256/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    </ul>
-                </section>
-            </section>
-        </footer>
-
-        <div id="copyright">
-            <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+    <footer class="border-t border-blue-100/60 py-6 sm:py-8 bg-white/75 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600 text-center sm:text-left">
+            <span class="font-display font-semibold text-base text-midnight">Myli Brown</span>
+            <div class="flex flex-wrap items-center justify-center gap-5 sm:gap-6">
+                <a href="mailto:mylib@uark.edu" class="hover:text-midnight transition-colors inline-flex items-center gap-2 min-h-[44px] py-1">
+                    <i class="fa-regular fa-envelope text-cerulean-600" aria-hidden="true"></i>
+                    <span>mylib@uark.edu</span>
+                </a>
+                <a href="https://www.linkedin.com/in/myli-brown-438349256/" rel="noopener noreferrer" target="_blank" class="hover:text-midnight transition-colors inline-flex items-center gap-2 min-h-[44px] py-1">
+                    <i class="fa-brands fa-linkedin-in text-cerulean-600" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
         </div>
-    </div>
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    </footer>
 </body>
 </html>
