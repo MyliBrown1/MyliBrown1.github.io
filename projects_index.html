@@ -1,166 +1,247 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
 <head>
-    <title>Myli's Online Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
-        img {
-            max-width: 100%;
-            height: auto;
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Projects | Myli Johnson Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          midnight: '#0a192f',
+          navy: { 900: '#0a192f', 800: '#0f233a', 700: '#1b3a5b', 600: '#234e79' },
+          slate: { 700: '#334e68', 600: '#486581', 500: '#627d98' },
+          cerulean: { 500: '#2b6cb0', 400: '#3182ce', 300: '#63b3ed', 200: '#90cdf4', 100: '#bee3f8', 50: '#ebf8ff' },
+          ice: '#e8f4fc',
+          'ice-mist': '#f0f7fd',
+          ink: { DEFAULT: '#0c1a2e', 50: '#f0f5fa', 100: '#dce7f3', 200: '#bad1e6', 800: '#132845', 900: '#0c1a2e', 950: '#060e1b' },
+          glacier: { 50: '#f4f8fc', 100: '#e5eff8', 200: '#cddff0', 300: '#a5c6e3', 400: '#75a6d3', 500: '#4e88c0', 600: '#396da6', 700: '#2e5787', 800: '#294970', 900: '#1d334e' },
+        },
+        fontFamily: {
+          serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+          sans: ['"Plus Jakarta Sans"', 'sans-serif'],
         }
-        .major h2, .post h2 {
-            font-size: 1.5em;
-            text-align: center;
-        }
-        @media screen and (max-width: 600px) {
-            body { font-size: 14px; }
-            .image.main img { width: 100%; height: auto; }
-            .posts article { padding: 10px; }
-            .actions.special { text-align: center; }
-        }
-    </style>
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body>
-    <div id="wrapper" class="fade-in">
-        <div id="intro">
-            <h1>My Portfolio</h1>
-            <ul class="actions">
-                <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-            </ul>
-        </div>
+<body class="bg-marble-texture text-ink-900 font-sans antialiased min-h-screen flex flex-col selection:bg-glacier-300 selection:text-ink-950">
 
-        <header id="header">
-            <a href="#main" class="logo">Myli Brown</a>
-        </header>
+<header class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/70 border-b border-white/60 px-6 sm:px-10 py-3.5 flex items-center justify-between transition-all duration-300">
+  <a href="index.html" class="flex items-center space-x-3">
+    <div class="w-10 h-10 rounded-full bg-[#0c1a2e] flex items-center justify-center text-white font-bold text-sm tracking-wider shadow-sm">MJ</div>
+    <span class="font-serif font-bold text-base text-[#0c1a2e] tracking-tight hover:opacity-80 transition-opacity">Myli Johnson</span>
+  </a>
+  <nav aria-label="Main Navigation" class="hidden md:flex items-center space-x-1 sm:space-x-2">
+    <a href="index.html" class="text-slate-600 hover:text-[#0c1a2e] text-sm font-medium transition-colors px-3 py-1.5">Home</a>
+    <a href="resume.html" class="text-slate-600 hover:text-[#0c1a2e] text-sm font-medium transition-colors px-3 py-1.5">Resume</a>
+    <a href="projects_index.html" class="bg-[#0c1a2e] text-white px-4 py-1.5 rounded-full font-medium text-sm shadow-sm">Projects</a>
+    <a href="Research.html" class="text-slate-600 hover:text-[#0c1a2e] text-sm font-medium transition-colors px-3 py-1.5">Research</a>
+  </nav>
+  <div class="flex items-center space-x-4 sm:space-x-5">
+    <a href="mailto:mylib@uark.edu" class="hidden lg:inline-flex items-center text-xs sm:text-sm font-medium text-slate-600 hover:text-[#0c1a2e] transition-colors">mylib@uark.edu</a>
+    <a href="https://www.linkedin.com/in/myli-brown-438349256/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1 text-xs sm:text-sm font-medium text-slate-600 hover:text-[#0c1a2e] transition-colors">
+      <span>LinkedIn</span>
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+    </a>
+  </div>
+</header>
 
-        <nav id="nav">
-            <ul class="links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="Research.html">Research</a></li>
-                <li class="active"><a href="projects_index.html">Projects</a></li>
-            </ul>
-            <ul class="icons">
-                <li><a href="https://www.linkedin.com/in/myli-brown-438349256/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-            </ul>
-        </nav>
+<main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="max-w-7xl mx-auto">
 
-        <div id="main">
-            <section class="posts">
-                <article>
-                    <header>
-                        <span class="date">Fall 2025</span>
-                        <h2><a href="MachineLearning.html">Machine Learning Projects</a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/Machine Learning Cover.png" alt="Machine Learning Projects" /></a>
-                    <h4 style="text-align: center;">Algorithms Used:</h4>
-                    <p style="text-align: center;">Adaline, Perceptron, Logistic Regression, Linear SVM, Multilayer Perceptron, CNN, and SARSA</p>
-                    <ul class="actions special">
-                        <li><a href="MachineLearning.html" class="button">See Projects</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date">Spring 2024</span>
-                        <h2><a href="Proj1.html">Abandoned Places Project</a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/Abandoned_AR_Cover.png" alt="Abandoned Places" /></a>
-                    <h4 style="text-align: center;">Skills Used:</h4>
-                    <p style="text-align: center;">Python, Web Scraping, Data Cleaning, Tableau, Visualization</p>
-                    <ul class="actions special">
-                        <li><a href="Proj1.html" class="button">See Project</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date">Fall 2023</span>
-                        <h2><a href="Proj2.html">Modeling COVID-19 Data</a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/COVID-19-Cover.png" alt="COVID-19" /></a>
-                    <h4 style="text-align: center;">Skills Used:</h4>
-                    <p style="text-align: center;">Jupyter Notebook, Python, Exploratory Data Analysis, Random Forest Modeling</p>
-                    <ul class="actions special">
-                        <li><a href="Proj2.html" class="button">See Project</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date">Spring 2024</span>
-                        <h2><a href="Proj3.html">Banking Database Project</a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/Banking Database Project.png" alt="Banking Database Project" /></a>
-                    <h4 style="text-align: center;">Skills Used:</h4>
-                    <p style="text-align: center;">SQL, Database Management</p>
-                    <ul class="actions special">
-                        <li><a href="Proj3.html" class="button">See Project</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date">Fall 2022</span>
-                        <h2><a href="Proj4.html">University Data Project</a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/Universities-Cover.png" alt="University Data Project" /></a>
-                    <h4 style="text-align: center;">Skills Used:</h4>
-                    <p style="text-align: center;">R Programming, Data Analysis, Data Visualization</p>
-                    <ul class="actions special">
-                        <li><a href="Proj4.html" class="button">See Project</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date">Fall 2024</span>
-                        <h2><a href="Proj5.html">ERP SIM Project</a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/ERP_Cover.png" alt="ERP SIM Project" /></a>
-                    <h4 style="text-align: center;">Skills Used:</h4>
-                    <p style="text-align: center;">SAP S/4HANA, Inventory Planning, Tableau Visualization</p>
-                    <ul class="actions special">
-                        <li><a href="Proj5.html" class="button">See Project</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date">Fall 2024</span>
-                        <h2><a href="Proj6.html">Linear Programming Project</a></h2>
-                    </header>
-                    <a class="image fit"><img src="images/LPCover.png" alt="Linear Programming Project" /></a>
-                    <h4 style="text-align: center;">Skills Used:</h4>
-                    <p style="text-align: center;">Linear Programming, Python Pyomo Solver</p>
-                    <ul class="actions special">
-                        <li><a href="Proj6.html" class="button">See Project</a></li>
-                    </ul>
-                </article>
-            </section>
-        </div>
+<section class="text-center max-w-3xl mx-auto mb-12">
+<h1 class="text-5xl sm:text-6xl font-serif font-bold text-ink-900 tracking-tight mb-4">Projects</h1>
+<p class="text-slate-600 font-light">A sampling of coursework, competitions, and independent projects in analytics and data science.</p>
+</section>
 
-        <footer id="footer">
-            <section class="split contact">
-                <section><h3>Phone</h3><p>(479) 774-1970</p></section>
-                <section><h3>Email</h3><p>mylib@uark.edu</p></section>
-                <section>
-                    <h3>Social</h3>
-                    <ul class="icons alt">
-                        <li><a href="https://www.linkedin.com/in/myli-brown-438349256/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    </ul>
-                </section>
-            </section>
-        </footer>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <div id="copyright">
-            <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-        </div>
+<!-- Machine Learning Projects -->
+<article class="glass-card rounded-2xl overflow-hidden flex flex-col">
+<div class="h-48 w-full bg-gradient-to-br from-ink-900 via-glacier-800 to-glacier-600 p-5 relative flex flex-col justify-between overflow-hidden">
+<div class="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<span class="z-10 text-white/80 text-xs font-semibold tracking-widest uppercase">Fall 2025</span>
+<div class="z-10 mt-auto flex items-end space-x-1.5 h-16 pt-3">
+<div class="w-1/6 h-6 bg-white/20 rounded-t"></div><div class="w-1/6 h-10 bg-white/30 rounded-t"></div><div class="w-1/6 h-8 bg-white/25 rounded-t"></div><div class="w-1/6 h-14 bg-glacier-300 rounded-t shadow-sm"></div><div class="w-1/6 h-7 bg-white/35 rounded-t"></div><div class="w-1/6 h-12 bg-white/40 rounded-t"></div>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-serif text-2xl font-bold text-ink-950 mb-2 leading-tight">Machine Learning Projects</h3>
+<p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">A semester-long series implementing core ML algorithms in Python &mdash; from Adaline and Perceptron through CNNs and reinforcement learning with SARSA.</p>
+<div class="flex flex-wrap gap-1.5 mb-6">
+<span class="tag-chip">Perceptron / SVM</span><span class="tag-chip">Multilayer Perceptron</span><span class="tag-chip">CNN</span><span class="tag-chip">SARSA</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-glacier-200/60">
+<a class="inline-flex items-center text-xs font-semibold text-ink-900 hover:text-glacier-600 transition-colors" href="MachineLearning.html">View Project Details
+<svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</article>
+
+<!-- Abandoned Places -->
+<article class="glass-card rounded-2xl overflow-hidden flex flex-col">
+<div class="h-48 w-full overflow-hidden relative">
+<img src="images/Abandoned_AR_Cover.png" alt="Abandoned Places Project" class="w-full h-full object-cover">
+<span class="absolute top-4 left-4 text-white/90 text-xs font-semibold tracking-widest uppercase bg-black/30 px-2 py-1 rounded">Fall 2023</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-serif text-2xl font-bold text-ink-950 mb-2 leading-tight">Abandoned Places Project</h3>
+<p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">Web-scraped a directory of abandoned locations, cleaned the data in Python, then built an interactive Tableau dashboard with a map, list view, and embedded search.</p>
+<div class="flex flex-wrap gap-1.5 mb-6">
+<span class="tag-chip">Python</span><span class="tag-chip">Web Scraping</span><span class="tag-chip">Data Cleaning</span><span class="tag-chip">Tableau</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-glacier-200/60">
+<a class="inline-flex items-center text-xs font-semibold text-ink-900 hover:text-glacier-600 transition-colors" href="Proj1.html">View Project Details
+<svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</article>
+
+<!-- COVID-19 -->
+<article class="glass-card rounded-2xl overflow-hidden flex flex-col">
+<div class="h-48 w-full overflow-hidden relative">
+<img src="images/COVID-19-Cover.png" alt="Modeling COVID-19 Data" class="w-full h-full object-cover">
+<span class="absolute top-4 left-4 text-white/90 text-xs font-semibold tracking-widest uppercase bg-black/30 px-2 py-1 rounded">Fall 2023</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-serif text-2xl font-bold text-ink-950 mb-2 leading-tight">Modeling COVID-19 Data</h3>
+<p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">Exploratory data analysis and Random Forest modeling of COVID-19 case data, built out in a Jupyter notebook.</p>
+<div class="flex flex-wrap gap-1.5 mb-6">
+<span class="tag-chip">Python</span><span class="tag-chip">Jupyter Notebook</span><span class="tag-chip">EDA</span><span class="tag-chip">Random Forest</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-glacier-200/60">
+<a class="inline-flex items-center text-xs font-semibold text-ink-900 hover:text-glacier-600 transition-colors" href="Proj2.html">View Project Details
+<svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</article>
+
+<!-- Banking Database -->
+<article class="glass-card rounded-2xl overflow-hidden flex flex-col">
+<div class="h-48 w-full overflow-hidden relative">
+<img src="images/Banking Database Project.png" alt="Banking Database Project" class="w-full h-full object-cover">
+<span class="absolute top-4 left-4 text-white/90 text-xs font-semibold tracking-widest uppercase bg-black/30 px-2 py-1 rounded">Spring 2024</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-serif text-2xl font-bold text-ink-950 mb-2 leading-tight">Banking Database Project</h3>
+<p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">Group project ("Hog Bank") building a relational banking database with a management interface for employees to handle customer accounts and transactions.</p>
+<div class="flex flex-wrap gap-1.5 mb-6">
+<span class="tag-chip">SQL</span><span class="tag-chip">Database Design</span><span class="tag-chip">Group Project</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-glacier-200/60">
+<a class="inline-flex items-center text-xs font-semibold text-ink-900 hover:text-glacier-600 transition-colors" href="Proj3.html">View Project Details
+<svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</article>
+
+<!-- University Data -->
+<article class="glass-card rounded-2xl overflow-hidden flex flex-col">
+<div class="h-48 w-full overflow-hidden relative">
+<img src="images/Universities-Cover.png" alt="University Data Project" class="w-full h-full object-cover">
+<span class="absolute top-4 left-4 text-white/90 text-xs font-semibold tracking-widest uppercase bg-black/30 px-2 py-1 rounded">Fall 2022</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-serif text-2xl font-bold text-ink-950 mb-2 leading-tight">University Data Project</h3>
+<p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">An R Markdown analysis exploring and visualizing a dataset of U.S. universities.</p>
+<div class="flex flex-wrap gap-1.5 mb-6">
+<span class="tag-chip">R</span><span class="tag-chip">Data Analysis</span><span class="tag-chip">Data Visualization</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-glacier-200/60">
+<a class="inline-flex items-center text-xs font-semibold text-ink-900 hover:text-glacier-600 transition-colors" href="Proj4.html">View Project Details
+<svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</article>
+
+<!-- ERP Simulation -->
+<article class="glass-card rounded-2xl overflow-hidden flex flex-col">
+<div class="h-48 w-full overflow-hidden relative">
+<img src="images/ERP_Cover.png" alt="ERP Simulation Project" class="w-full h-full object-cover">
+<span class="absolute top-4 left-4 text-white/90 text-xs font-semibold tracking-widest uppercase bg-black/30 px-2 py-1 rounded">Fall 2024</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-serif text-2xl font-bold text-ink-950 mb-2 leading-tight">ERP Simulation Project</h3>
+<p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">Ran a simulated cereal manufacturing company in SAP as a team of four, making sourcing, pricing, and production decisions across four rounds of competition &mdash; finishing 2nd in the class.</p>
+<div class="flex flex-wrap gap-1.5 mb-6">
+<span class="tag-chip">SAP S/4HANA</span><span class="tag-chip">Inventory Planning</span><span class="tag-chip">Tableau</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-glacier-200/60">
+<a class="inline-flex items-center text-xs font-semibold text-ink-900 hover:text-glacier-600 transition-colors" href="Proj5.html">View Project Details
+<svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</article>
+
+<!-- Linear Programming -->
+<article class="glass-card rounded-2xl overflow-hidden flex flex-col md:col-span-2 lg:col-span-1">
+<div class="h-48 w-full overflow-hidden relative">
+<img src="images/LPCover.png" alt="Linear Programming Project" class="w-full h-full object-cover">
+<span class="absolute top-4 left-4 text-white/90 text-xs font-semibold tracking-widest uppercase bg-black/30 px-2 py-1 rounded">Fall 2024</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-serif text-2xl font-bold text-ink-950 mb-2 leading-tight">Linear Programming Project</h3>
+<p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">Formulated and solved production-planning optimization problems in Python using the Pyomo solver.</p>
+<div class="flex flex-wrap gap-1.5 mb-6">
+<span class="tag-chip">Linear Programming</span><span class="tag-chip">Python</span><span class="tag-chip">Pyomo</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-glacier-200/60">
+<a class="inline-flex items-center text-xs font-semibold text-ink-900 hover:text-glacier-600 transition-colors" href="Proj6.html">View Project Details
+<svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</article>
+
+</div>
+</div>
+</main>
+
+<footer class="w-full border-t border-slate-200/60 bg-white/70 backdrop-blur-md py-8 px-6 mt-16 relative z-10">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-sans">
+    <span class="font-semibold text-slate-800 tracking-wide">Myli Johnson</span>
+    <div class="flex items-center gap-6">
+      <a href="mailto:mylib@uark.edu" class="hover:text-slate-900 transition-colors flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        mylib@uark.edu
+      </a>
+      <a href="https://www.linkedin.com/in/myli-brown-438349256/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 transition-colors flex items-center gap-1">
+        LinkedIn
+        <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+      </a>
     </div>
+  </div>
+</footer>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
 </body>
 </html>

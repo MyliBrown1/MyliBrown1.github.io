@@ -1,79 +1,78 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Project 3</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<header id="header">
-				<a href="index.html" class="logo">Myli Brown</a>
-			</header>
-			<nav id="nav">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="resume.html">Resume</a></li>
-					<li><a href="Research.html">Research</a></li>
-					<li><a href="projects_index.html">Projects</a></li>
-					<li class="active"><a href="Proj3.html">Project 3</a></li>
-				</ul>
-				<ul class="icons">
-					<li><a href="https://www.linkedin.com/in/myli-brown-438349256/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-				</ul>
-			</nav>
-			<div id="main">
-				<section class="post">
-					<header class="major">
-						<span class="date">Spring 2024</span>
-						<h1>Banking Database Project:<br /> </h1>
-						<hr />
-						<div class="box">
-							<p>This project was a group project where we were responsible for building a bank database for bank employees to log in and make transactions for customers. <br />
-							The pdf below shows the outline of our project as well as some of the steps we took in creating the database:</p>
-						</div>
-						<embed src="images/Hog_Bank_Presentation.pdf" type="application/pdf" width="100%" height="800">
-						<div class="box">
-							<p>Next is a user's manual that we created showing users how to navigate the database:</p>
-						</div>
-						<embed src="images/User_Manual (1).pdf" type="application/pdf" width="100%" height="800">
-						<div class="box">
-							<p>Finally, here is a list of some of the SQL queries that are being used within the database:</p>
-						</div>
-						<embed src="images/SQL Queries.pdf" type="application/pdf" width="100%" height="800">
-						<hr />
-					</header>
-				</section>
-			</div>
-			<footer id="footer">
-				<section class="split contact">
-					<section><h3>Phone</h3><p>(479) 774-1970</p></section>
-					<section><h3>Email</h3><p>mylib@uark.edu</p></section>
-					<section>
-						<h3>Social</h3>
-						<ul class="icons alt">
-							<li><a href="https://www.linkedin.com/in/myli-brown-438349256/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-						</ul>
-					</section>
-				</section>
-			</footer>
-			<div id="copyright">
-				<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-			</div>
-		</div>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banking Database Project | Myli Johnson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      fontFamily: { serif: ['"Cormorant Garamond"', 'serif'], sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+      colors: { navy: { 900: '#0c1a2e', 800: '#112250', 700: '#1e3a8a' } }
+    } }
+  }
+</script>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="min-h-screen text-slate-800 flex flex-col relative bg-marble-canvas selection:bg-navy-900 selection:text-white">
+<header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-white/60 shadow-sm transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-full bg-navy-900 text-white flex items-center justify-center font-serif text-lg font-bold shadow-md shadow-navy-900/10 transition-transform group-hover:scale-105">MJ</div>
+      <span class="font-serif text-xl font-bold tracking-tight text-navy-900 leading-tight">Myli Johnson</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-1.5 bg-slate-100/80 p-1.5 rounded-full border border-white/80 shadow-inner">
+      <a href="index.html" class="px-4 py-1.5 rounded-full text-xs font-semibold text-slate-600 hover:text-navy-900 transition-colors">Home</a>
+      <a href="resume.html" class="px-4 py-1.5 rounded-full text-xs font-semibold text-slate-600 hover:text-navy-900 transition-colors">Resume</a>
+      <a href="projects_index.html" class="px-4 py-1.5 rounded-full text-xs font-semibold text-slate-600 hover:text-navy-900 transition-colors">Projects</a>
+      <a href="Research.html" class="px-4 py-1.5 rounded-full text-xs font-semibold text-slate-600 hover:text-navy-900 transition-colors">Research</a>
+      <div class="h-4 w-[1px] bg-slate-300 mx-1"></div>
+      <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-navy-900 text-white shadow-sm flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-sky-300 animate-pulse"></span>Banking Database
+      </span>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="mailto:mylib@uark.edu" class="text-xs font-medium text-slate-600 hover:text-navy-900 hidden sm:flex items-center gap-1.5 transition-colors">mylib@uark.edu</a>
+      <a href="https://www.linkedin.com/in/myli-brown-438349256/" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-slate-600 hover:text-navy-900 flex items-center gap-1 transition-colors">LinkedIn</a>
+    </div>
+  </div>
+</header>
+<main class="flex-grow max-w-5xl w-full mx-auto px-6 lg:px-12 py-10">
+  <div class="flex items-center justify-between mb-8">
+    <a href="projects_index.html" class="inline-flex items-center gap-2 text-xs font-semibold text-slate-600 hover:text-navy-900 bg-white/70 backdrop-blur-md px-4 py-2 rounded-full border border-white/80 shadow-sm transition-all hover:bg-white">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+      Back to All Projects
+    </a>
+    <div class="flex items-center gap-2 text-xs text-slate-500 font-medium">
+      <span>Projects</span><span>/</span><span class="text-navy-900 font-semibold">Banking Database</span>
+    </div>
+  </div>
+  <div class="text-center max-w-3xl mx-auto mb-10">
+    <span class="inline-block text-xs uppercase tracking-wider font-semibold text-slate-500 mb-3">Spring 2024</span>
+    <h1 class="font-serif text-5xl md:text-6xl font-bold text-navy-900 tracking-tight leading-tight mb-4">Banking Database Project</h1>
+    <p class="text-slate-600 text-base md:text-lg font-light leading-relaxed">A group project ("Hog Bank") building a relational bank database for employees to log in and process customer transactions.</p>
+  </div>
+  <div class="space-y-8">
+    <div class="content-block p-8 md:p-10"><p class="leading-relaxed text-slate-700">This project was a group project where we were responsible for building a bank database for bank employees to log in and make transactions for customers. The presentation below outlines the project and the steps we took in creating the database:</p></div>
+    <div class="embed-frame"><embed src="images/Hog_Bank_Presentation.pdf" type="application/pdf" width="100%" height="800" class="block"></div>
+    <div class="content-block p-8 md:p-10"><p class="leading-relaxed text-slate-700">Next is a user's manual we created showing users how to navigate the database:</p></div>
+    <div class="embed-frame"><embed src="images/User_Manual (1).pdf" type="application/pdf" width="100%" height="800" class="block"></div>
+    <div class="content-block p-8 md:p-10"><p class="leading-relaxed text-slate-700">Finally, here is a list of some of the SQL queries used within the database:</p></div>
+    <div class="embed-frame"><embed src="images/SQL Queries.pdf" type="application/pdf" width="100%" height="800" class="block"></div>
+  </div>
+</main>
+<footer class="mt-auto backdrop-blur-md bg-white/70 border-t border-slate-200/60 py-8">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
+    <span class="font-bold text-navy-900 text-sm">Myli Johnson</span>
+    <div class="flex items-center gap-6">
+      <a href="mailto:mylib@uark.edu" class="hover:text-navy-900 flex items-center gap-1.5 transition-colors">mylib@uark.edu</a>
+      <a href="https://www.linkedin.com/in/myli-brown-438349256/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 flex items-center gap-1 transition-colors">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+</body>
 </html>

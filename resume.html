@@ -1,91 +1,233 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Resume</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Resume &amp; Curriculum Vitae | Myli Johnson</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: { navy: { 900: '#0a192f', 800: '#0f233a' }, cerulean: { 600: '#2b6cb0', 500: '#2b6cb0' } },
+      fontFamily: { serif: ['"Cormorant Garamond"', 'Georgia', 'serif'], sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+    } }
+  }
+</script>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="bg-marble-canvas text-slate-700 font-sans antialiased min-h-screen flex flex-col">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-white/60 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-full bg-navy-900 text-white flex items-center justify-center font-serif text-lg font-bold shadow-md transition-transform group-hover:scale-105">MJ</div>
+      <span class="font-serif text-xl font-bold tracking-tight text-navy-900 leading-tight">Myli Johnson</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-1.5 bg-slate-100/80 p-1.5 rounded-full border border-white/80 shadow-inner">
+      <a href="index.html" class="px-4 py-1.5 rounded-full text-xs font-semibold text-slate-600 hover:text-navy-900 transition-colors">Home</a>
+      <span class="px-4 py-1.5 rounded-full text-xs font-bold bg-navy-900 text-white shadow-sm">Resume</span>
+      <a href="projects_index.html" class="px-4 py-1.5 rounded-full text-xs font-semibold text-slate-600 hover:text-navy-900 transition-colors">Projects</a>
+      <a href="Research.html" class="px-4 py-1.5 rounded-full text-xs font-semibold text-slate-600 hover:text-navy-900 transition-colors">Research</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="mailto:mylib@uark.edu" class="text-xs font-medium text-slate-600 hover:text-navy-900 hidden sm:flex items-center gap-1.5 transition-colors">mylib@uark.edu</a>
+      <a href="https://www.linkedin.com/in/myli-brown-438349256/" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-slate-600 hover:text-navy-900 flex items-center gap-1 transition-colors">LinkedIn</a>
+      <a href="images/Myli_New_Resume.pdf" download class="inline-flex items-center gap-2 bg-navy-900 hover:bg-midnight text-white text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-full shadow-sm transition-all">
+        <i class="fa-solid fa-download text-[10px]"></i><span>Download PDF</span>
+      </a>
+    </div>
+  </div>
+</header>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Myli Brown</a>
-					</header>
+<main class="flex-grow max-w-4xl w-full mx-auto px-6 lg:px-12 py-12">
+  <div class="text-center max-w-2xl mx-auto mb-12">
+    <h1 class="font-serif text-5xl sm:text-6xl font-bold text-navy-900 tracking-tight mb-4">Resume</h1>
+    <p class="text-slate-600 font-light">Applied Business Analytics graduate student &middot; Doctoral applicant, Information Systems</p>
+  </div>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li class="active"><a href="resume.html">Resume</a></li>
-							<li><a href="Research.html">Research</a></li>
-							<li><a href="projects_index.html">Projects</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/myli-brown-438349256/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-							
-						</ul>
-					</nav>
+  <div class="content-block p-8 md:p-10 mb-8">
+    <h2 class="font-serif text-2xl font-bold text-navy-900 mb-3">Professional Overview</h2>
+    <p class="leading-relaxed text-slate-700">Applied Business Analytics graduate student pursuing doctoral study in Information Systems, with a research background spanning data science, statistics, and business analytics. Experienced in applying statistical and machine learning methods to real-world data, with research interests in anomaly detection, data-driven decision-making, and the application of analytics to business problems. Seeking to build on this foundation through doctoral research and teaching.</p>
+  </div>
 
-				<!-- Main -->
-					<div id="main">
+  <div class="content-block p-8 md:p-10 mb-8">
+    <h2 class="font-serif text-2xl font-bold text-navy-900 mb-5">Education</h2>
+    <div class="space-y-6">
+      <div>
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="font-semibold text-navy-900">Master of Applied Business Analytics &mdash; Sam M. Walton College of Business, University of Arkansas, Fayetteville, AR</h3>
+          <span class="text-xs text-slate-500 font-mono">Aug 2025 &ndash; May 2027 (Expected)</span>
+        </div>
+        <p class="text-sm text-slate-600 mt-1">GPA: 4.0 / 4.0 &middot; Started in the 4+1 program and transitioned to full-time student in May 2026.</p>
+      </div>
+      <div>
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="font-semibold text-navy-900">Bachelor of Science, Data Science &mdash; College of Engineering, University of Arkansas, Fayetteville, AR</h3>
+          <span class="text-xs text-slate-500 font-mono">Aug 2022 &ndash; May 2026</span>
+        </div>
+        <p class="text-sm text-slate-600 mt-1">GPA: 4.0 / 4.0 &middot; Concentration: Business Data Analytics &middot; Minor: Statistics &middot; Honors Student &middot; Summa Cum Laude, First-Ranked Senior Scholar.</p>
+      </div>
+    </div>
+  </div>
 
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<h1>My Resume:<br />
-								</header>
-                                <embed src="images/Myli_New_Resume.pdf" type="application/pdf" width="100%" height="2200">
-							</section>
+  <div class="content-block p-8 md:p-10 mb-8">
+    <h2 class="font-serif text-2xl font-bold text-navy-900 mb-3">Standardized Test Scores</h2>
+    <p class="leading-relaxed text-slate-700">GRE General Test (August 2026): Overall Score &ndash; 322</p>
+    <p class="text-sm text-slate-600 mt-1">Verbal Reasoning &mdash; 161 &middot; Quantitative Reasoning &mdash; 161 &middot; Analytical Writing &mdash; 5.0</p>
+  </div>
 
-					</div>
+  <div class="content-block p-8 md:p-10 mb-8">
+    <h2 class="font-serif text-2xl font-bold text-navy-900 mb-4">Honors &amp; Awards</h2>
+    <ul class="list-disc list-inside text-sm text-slate-700 space-y-1.5">
+      <li>Charles B. &amp; Mary E. Friley Endowed Scholarship, Sam M. Walton College of Business (2026&ndash;27)</li>
+      <li>Russell E. Westmeyer Fellowship in Graduate Studies Scholarship, Sam M. Walton College of Business (2026&ndash;27)</li>
+      <li>Data Science Practicum Outstanding Team Member Award (2025&ndash;2026)</li>
+    </ul>
+  </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-												<section class="split contact">
-					
-							<section>
-								<h3>Phone</h3>
-								<p>(479) 774-1970</p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p>mylib@uark.edu</p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/myli-brown-438349256/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-									
-								</ul>
-							</section>
-						</section>
-					</footer>
+  <div class="content-block p-8 md:p-10 mb-8">
+    <h2 class="font-serif text-2xl font-bold text-navy-900 mb-4">Skills</h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="tag-chip">Python</span><span class="tag-chip">R</span><span class="tag-chip">SQL</span><span class="tag-chip">SAP S/4HANA</span>
+      <span class="tag-chip">Tableau</span><span class="tag-chip">SAS Enterprise Miner</span><span class="tag-chip">SAS Viya</span>
+      <span class="tag-chip">Statistical Analysis</span><span class="tag-chip">Data Cleaning &amp; Management</span>
+      <span class="tag-chip">Data Visualization</span><span class="tag-chip">Microsoft Office Suite</span>
+    </div>
+  </div>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+  <div class="content-block p-8 md:p-10 mb-8">
+    <h2 class="font-serif text-2xl font-bold text-navy-900 mb-4">Relevant Coursework</h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="tag-chip">Data Management &amp; Databases</span><span class="tag-chip">Business Analytics</span>
+      <span class="tag-chip">Business Intelligence</span><span class="tag-chip">AI in Analytics</span>
+      <span class="tag-chip">Data Visualization &amp; Communication</span><span class="tag-chip">Optimization Methods in Data Science</span>
+      <span class="tag-chip">Intro to Mathematical Statistics</span><span class="tag-chip">Data Structures &amp; Algorithms</span>
+      <span class="tag-chip">Data Science Senior Practicum</span><span class="tag-chip">ERP Systems</span>
+      <span class="tag-chip">Digital Innovations</span><span class="tag-chip">Systems Development</span>
+    </div>
+  </div>
 
-			</div>
+  <div class="content-block p-8 md:p-10 mb-8">
+    <h2 class="font-serif text-2xl font-bold text-navy-900 mb-5">Research</h2>
+    <div class="space-y-6">
+      <div>
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="font-semibold text-navy-900">Honors Senior Thesis &mdash; Anomaly Identification and Detection Using Statistical and Machine Learning Methods</h3>
+          <span class="text-xs text-slate-500 font-mono">2025 &ndash; 2026</span>
+        </div>
+        <p class="text-xs text-slate-500 italic mb-1">University of Arkansas Honors College, Retail Industry Partner</p>
+        <ul class="list-disc list-inside text-sm text-slate-600 mt-1 space-y-1">
+          <li>Investigated statistical and machine learning methods for detecting anomalies in retail demand forecasting data, aiming to reduce forecast error in perishable food inventory planning.</li>
+          <li>Built an end-to-end anomaly detection pipeline on a cloud-based data platform, including data cleaning, statistical analysis, and feature engineering segmented by item-store combinations.</li>
+          <li>Trained and tuned an Isolation Forest model, adjusting classification thresholds to prioritize catching minority-class anomalies.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="font-semibold text-navy-900">Data Science Practicum Team Project &mdash; Anomaly Detection and AI Alert System</h3>
+          <span class="text-xs text-slate-500 font-mono">2025 &ndash; 2026</span>
+        </div>
+        <p class="text-xs text-slate-500 italic mb-1">University of Arkansas Data Science Program, Retail Industry Partner</p>
+        <ul class="list-disc list-inside text-sm text-slate-600 mt-1 space-y-1">
+          <li>Worked as part of a three-person senior data science team, collaborating directly with industry experts from the retail partner organization.</li>
+          <li>Developed a streamlined anomaly detection alert system for daily fresh-item forecasts, training an Isolation Forest model on operational data via Microsoft Azure Databricks.</li>
+          <li>Built a downstream correction pipeline using a Retrieval-Augmented Generation (RAG) AI agent to explain anomalies and recommend corrective actions to store associates.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-sm text-slate-600 mt-5">Full write-up of the honors thesis on the <a href="Research.html" class="text-cerulean-600 underline hover:text-navy-900">Research page</a>.</p>
+  </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  <div class="content-block p-8 md:p-10 mb-8">
+    <h2 class="font-serif text-2xl font-bold text-navy-900 mb-5">Job Experience</h2>
+    <div class="space-y-6">
+      <div>
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="font-semibold text-navy-900">Mathnasium Instructor &mdash; Mathnasium, Math Learning Center</h3>
+          <span class="text-xs text-slate-500 font-mono">Jul 2026 &ndash; Present</span>
+        </div>
+        <ul class="list-disc list-inside text-sm text-slate-600 mt-1 space-y-1">
+          <li>Instruct and manage a group of students ranging from pre-school through high school age in foundational and advanced math concepts.</li>
+          <li>Maintain each student's individualized learning plan, ensuring consistent progress through core math concepts.</li>
+          <li>Emphasize conceptual understanding over rote memorization, helping students build the ability to self-direct their learning.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="font-semibold text-navy-900">Academic Tutor, Athletics Department &mdash; University of Arkansas</h3>
+          <span class="text-xs text-slate-500 font-mono">Aug 2024 &ndash; May 2025</span>
+        </div>
+        <ul class="list-disc list-inside text-sm text-slate-600 mt-1 space-y-1">
+          <li>Tutored student-athletes in College Algebra, Pre-Calculus, Calculus I &amp; II, and Introductory Statistics, adapting explanations of difficult concepts to individual learning needs.</li>
+          <li>Tracked student progress across sessions to inform ongoing instruction and course outcomes.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="font-semibold text-navy-900">Math Tutor &mdash; Arkansas Tech University Math Lab</h3>
+          <span class="text-xs text-slate-500 font-mono">Jun 2022 &ndash; Jul 2022</span>
+        </div>
+        <ul class="list-disc list-inside text-sm text-slate-600 mt-1 space-y-1">
+          <li>Provided individualized instruction in Calculus, Pre-Calculus, College Algebra, and Statistics.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="font-semibold text-navy-900">Private Tutor &mdash; Online Private Tutoring</h3>
+          <span class="text-xs text-slate-500 font-mono">Aug 2021 &ndash; May 2022</span>
+        </div>
+        <ul class="list-disc list-inside text-sm text-slate-600 mt-1 space-y-1">
+          <li>Designed lesson plans and delivered one-on-one virtual instruction in math, science, and English to a middle-school student.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-	</body>
+  <div class="content-block p-8 md:p-10 mb-10">
+    <h2 class="font-serif text-2xl font-bold text-navy-900 mb-5">Additional Experience</h2>
+    <div class="space-y-6">
+      <div>
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="font-semibold text-navy-900">Poll Supervisor &mdash; Johnson County Election Commission</h3>
+          <span class="text-xs text-slate-500 font-mono">May 2022 &ndash; Jul 2022</span>
+        </div>
+        <ul class="list-disc list-inside text-sm text-slate-600 mt-1 space-y-1">
+          <li>Led a team of poll workers through a primary and runoff election, ensuring compliance with election law and resolving process disputes.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="font-semibold text-navy-900">Early Voting Administrator &mdash; Johnson County Clerk's Office</h3>
+          <span class="text-xs text-slate-500 font-mono">Jun 2022 &ndash; Jul 2022</span>
+        </div>
+        <ul class="list-disc list-inside text-sm text-slate-600 mt-1 space-y-1">
+          <li>Managed early voting equipment and voter communications as part of a four-person team.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <h2 class="font-serif text-2xl font-bold text-navy-900 mb-3 text-center">Full Resume (PDF)</h2>
+  </div>
+  <div class="embed-frame">
+    <embed src="images/Myli_New_Resume.pdf" type="application/pdf" width="100%" height="1100" class="block">
+  </div>
+</main>
+
+<footer class="mt-auto backdrop-blur-md bg-white/70 border-t border-slate-200/60 py-8">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
+    <span class="font-bold text-navy-900 text-sm">Myli Johnson</span>
+    <div class="flex items-center gap-6">
+      <a href="mailto:mylib@uark.edu" class="hover:text-navy-900 flex items-center gap-1.5 transition-colors">mylib@uark.edu</a>
+      <a href="https://www.linkedin.com/in/myli-brown-438349256/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 flex items-center gap-1 transition-colors">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+</body>
 </html>

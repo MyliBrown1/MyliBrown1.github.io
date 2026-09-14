@@ -1,95 +1,84 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Undergraduate Research</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Research | Myli Johnson Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: { brand: { navy: '#0c1a2e', deep: '#06101e', slate: '#1e3a5f', blue: '#204e79', ice: '#e8f2fa' } },
+      fontFamily: { serif: ['"Cormorant Garamond"', 'Georgia', 'serif'], sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+    } }
+  }
+</script>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="bg-marble-canvas text-slate-700 font-sans antialiased min-h-screen flex flex-col">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-white/60 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-full bg-brand-navy text-white flex items-center justify-center font-serif text-lg font-bold shadow-md transition-transform group-hover:scale-105">MJ</div>
+      <span class="font-serif text-xl font-bold tracking-tight text-brand-navy leading-tight">Myli Johnson</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-1.5 bg-slate-100/80 p-1.5 rounded-full border border-white/80 shadow-inner">
+      <a href="index.html" class="px-4 py-1.5 rounded-full text-xs font-semibold text-slate-600 hover:text-brand-navy transition-colors">Home</a>
+      <a href="resume.html" class="px-4 py-1.5 rounded-full text-xs font-semibold text-slate-600 hover:text-brand-navy transition-colors">Resume</a>
+      <a href="projects_index.html" class="px-4 py-1.5 rounded-full text-xs font-semibold text-slate-600 hover:text-brand-navy transition-colors">Projects</a>
+      <span class="px-4 py-1.5 rounded-full text-xs font-bold bg-brand-navy text-white shadow-sm">Research</span>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="mailto:mylib@uark.edu" class="text-xs font-medium text-slate-600 hover:text-brand-navy hidden sm:flex items-center gap-1.5 transition-colors">mylib@uark.edu</a>
+      <a href="https://www.linkedin.com/in/myli-brown-438349256/" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-slate-600 hover:text-brand-navy flex items-center gap-1 transition-colors">LinkedIn</a>
+    </div>
+  </div>
+</header>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Myli Brown</a>
-					</header>
+<main class="flex-grow max-w-4xl w-full mx-auto px-6 lg:px-12 py-12">
+  <div class="text-center max-w-2xl mx-auto mb-12">
+    <h1 class="font-serif text-5xl sm:text-6xl font-bold text-brand-navy tracking-tight mb-4">Research</h1>
+    <p class="text-slate-600 font-light">Undergraduate honors thesis work in statistics and machine learning.</p>
+  </div>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="resume.html">Resume</a></li>
-                            <li class="active"><a href="Research.html">Research</a></li>
-                            <li><a href="projects_index.html">Projects</a></li>
+  <article class="glass-card rounded-2xl overflow-hidden mb-10">
+    <div class="bg-gradient-to-br from-brand-navy via-brand-slate to-brand-blue p-6 sm:p-8">
+      <span class="inline-block text-xs uppercase tracking-wider font-semibold text-white/90 bg-white/10 px-3 py-1 rounded-full border border-white/20 mb-2">Honors Senior Thesis</span>
+      <div class="flex flex-wrap items-center justify-between gap-2 text-white/70 text-xs font-medium">
+        <span>University of Arkansas, Data Science Program</span>
+        <span>Spring 2026</span>
+      </div>
+    </div>
+    <div class="p-6 sm:p-8">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-navy mb-3 leading-tight">Anomaly Identification and Detection Using Statistical and Machine Learning Methods</h2>
+      <p class="text-slate-700 leading-relaxed mb-4">This study investigates methods for identifying anomalies in retail demand forecasting data using both statistical techniques and machine learning models, with the goal of reducing forecast error in perishable food inventory planning. Working with a large-scale retail company's dataset, the project builds an end-to-end anomaly detection pipeline &mdash; data cleaning, statistical analysis, and model development on a cloud-based data platform.</p>
+      <p class="text-slate-700 leading-relaxed mb-4">Anomalies are defined as forecast errors exceeding &plusmn;3 standard deviations from the mean. Data is segmented by item&ndash;store combination, with feature engineering applied to improve separability between normal and anomalous observations. An Isolation Forest model is then trained and tuned to prioritize catching the minority (anomalous) class in a highly imbalanced dataset.</p>
+      <p class="text-slate-700 leading-relaxed mb-6">The results show the value of combining statistical rules with machine learning into a scalable framework for identifying errors in perishable-item demand forecasting within a large retail environment.</p>
+      <div class="flex flex-wrap gap-1.5 mb-6">
+        <span class="tag-chip">Isolation Forest</span><span class="tag-chip">Time Series</span><span class="tag-chip">Python</span><span class="tag-chip">Anomaly Detection</span>
+      </div>
+      <p class="text-sm text-slate-500 italic">Conducted as part of an undergraduate practicum course and honors thesis requirement, in collaboration with a data science team at a large retail company. Due to the sensitive, proprietary nature of the underlying data, the abstract is available below, but the full paper is under a three-year embargo per NDA requirements.</p>
+    </div>
+  </article>
 
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/myli-brown-438349256/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-							
-						</ul>
-					</nav>
+  <div class="embed-frame">
+    <embed src="images/ResearchAbstract.pdf" type="application/pdf" width="100%" height="800" class="block">
+  </div>
+</main>
 
-				<!-- Main -->
-					<div id="main">
+<footer class="mt-auto backdrop-blur-md bg-white/70 border-t border-slate-200/60 py-8">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
+    <span class="font-bold text-brand-navy text-sm">Myli Johnson</span>
+    <div class="flex items-center gap-6">
+      <a href="mailto:mylib@uark.edu" class="hover:text-brand-navy flex items-center gap-1.5 transition-colors">mylib@uark.edu</a>
+      <a href="https://www.linkedin.com/in/myli-brown-438349256/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-navy flex items-center gap-1 transition-colors">LinkedIn</a>
+    </div>
+  </div>
+</footer>
 
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<h1>Undergraduate Research:<br />
-								</header>
-								<p> My research focuses on statistics and machine learning applications in the field of anomaly detection primarily in fresh product data for large retail environments.</p>
-									<p> The research was conducted as a part of my undergraduate practicum course and my honors thesis requirements at the University of Arkansas.</p>
-									<p> Due to the sensitive nature of the analyses, the abstract is available, but the full research paper is under a three year embargo.</p>
-                                <embed src="images/ResearchAbstract.pdf" type="application/pdf" width="100%" height="2200">
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-												<section class="split contact">
-					
-							<section>
-								<h3>Phone</h3>
-								<p>(479) 774-1970</p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p>mylib@uark.edu</p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/myli-brown-438349256/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-									
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
