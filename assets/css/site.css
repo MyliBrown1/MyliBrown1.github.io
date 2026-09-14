@@ -1,0 +1,103 @@
+/* =========================================================================
+   Myli Johnson — Portfolio Design System
+   Shared across every page. Companion to the per-page Tailwind config.
+   ========================================================================= */
+
+/* ---- Self-hosted "frosted marble" backdrop -----------------------------
+   Replaces the temporary Stitch preview image with a durable, license-free
+   CSS-only backdrop in the same ice-blue/navy family, so the site never
+   depends on an external asset that could disappear. */
+.bg-marble-canvas,
+.bg-marble-texture {
+  background-color: #eef6fc;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 20% 0%, rgba(191, 219, 245, 0.55), transparent 60%),
+    radial-gradient(ellipse 60% 45% at 85% 15%, rgba(180, 210, 240, 0.45), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(210, 230, 248, 0.6), transparent 60%),
+    linear-gradient(160deg, #f3f8fd 0%, #e9f2fb 45%, #e3edf9 100%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.ambient-overlay {
+  background: radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.72) 0%, rgba(235, 246, 254, 0.85) 55%, rgba(224, 240, 252, 0.94) 100%);
+}
+.ambient-glow-soft {
+  background: radial-gradient(circle at center, rgba(160, 206, 246, 0.35) 0%, rgba(214, 235, 252, 0.15) 50%, transparent 75%);
+}
+
+/* ---- Glass card families (unified across home / projects / research) --- */
+.glass-card-academic,
+.glass-card {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 36px -8px rgba(32, 68, 105, 0.08), 0 2px 8px rgba(32, 68, 105, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-academic:hover,
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(144, 205, 244, 0.85);
+  box-shadow: 0 18px 40px -10px rgba(20, 50, 85, 0.14), 0 0 28px rgba(147, 197, 253, 0.35);
+}
+
+.portal-card-marble {
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 14px 38px -10px rgba(30, 64, 100, 0.09), 0 2px 8px rgba(30, 64, 100, 0.03);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.portal-card-marble:hover {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(144, 205, 244, 0.9);
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px -12px rgba(20, 50, 85, 0.14), 0 0 32px rgba(147, 197, 253, 0.4);
+}
+
+/* ---- Content blocks for detail pages (project write-ups, etc.) -------- */
+.content-block {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  box-shadow: 0 10px 30px -10px rgba(12, 26, 46, 0.08);
+  border-radius: 1.5rem;
+}
+
+.media-frame {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 14px 34px -12px rgba(12, 26, 46, 0.18);
+  background: #fff;
+}
+
+.embed-frame {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(190, 209, 230, 0.7);
+  background: #fff;
+  box-shadow: 0 10px 30px -12px rgba(12, 26, 46, 0.12);
+}
+
+/* ---- Nav / pill helpers -------------------------------------------------*/
+.glass-pill {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(205, 223, 240, 0.7);
+}
+
+/* ---- Tag chips ----------------------------------------------------------*/
+.tag-chip {
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 11px;
+  font-weight: 500;
+  background: #e5eff8;
+  color: #294970;
+  border: 1px solid #cddff0;
+}
